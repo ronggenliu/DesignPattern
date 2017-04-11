@@ -2,5 +2,6 @@ package me.ronggenliu.dp.adapter;
 
 public interface Target {
 
-	void process();
+	void process1();
+	void process2();
 }
