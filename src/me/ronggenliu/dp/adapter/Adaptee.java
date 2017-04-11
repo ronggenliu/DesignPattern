@@ -2,7 +2,7 @@ package me.ronggenliu.dp.adapter;
 
 public class Adaptee {
 
-	void specificProcess() {
-		System.out.println("Specific Process");
+	void specificProcess1() {
+		System.out.println("Specific Process1");
 	}
 }

@@ -6,6 +6,6 @@ public class Adapter extends AbstractAdapter {
 	
 	@Override
 	public void process1() {
-		adaptee.specificProcess();
+		adaptee.specificProcess1();
 	}
 }
