@@ -1,6 +1,6 @@
 package me.ronggenliu.dp.bridge;
 
-public class Launcher {
+public class Client {
 
 	public static void main(String[] args) {
 		Implementor impl = new ConcreteImpl1();
