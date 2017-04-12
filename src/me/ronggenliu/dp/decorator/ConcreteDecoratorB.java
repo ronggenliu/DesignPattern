@@ -13,7 +13,7 @@ public class ConcreteDecoratorB extends Decrator {
 
 	@Override
 	void operation() {
-		component.operation();
+		super.operation();
 		additionBehavior();
 	}
 
