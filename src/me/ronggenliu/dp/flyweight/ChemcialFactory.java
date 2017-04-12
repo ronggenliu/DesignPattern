@@ -10,7 +10,7 @@ public class ChemcialFactory {
 	public void createChemical(String name, String symbol, double atomicWeight) {
 		if(!chemicals.containsKey(name)) {
 			chemicals.put(name, this.new ChemicalImpl(name, symbol, atomicWeight));
-		}
+		};
 	}
 	
 	public Chemical getChemical(String name) {
