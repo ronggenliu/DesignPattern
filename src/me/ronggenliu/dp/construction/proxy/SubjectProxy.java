@@ -4,12 +4,6 @@ public class SubjectProxy implements Subject {
 
 	private Subject subject;
 	
-	
-	public SubjectProxy(Subject subject) {
-		super();
-		this.setSubject(subject);
-	}
-	
 	public SubjectProxy() {
 		super();
 	}

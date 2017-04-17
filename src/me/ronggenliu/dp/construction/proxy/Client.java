@@ -9,7 +9,8 @@ public class Client {
 		proxy.process();
 		
 		SubjectHandler subjectHandler = new SubjectHandler();
-		Subject subject = (Subject) Proxy.newProxyInstance(Subject.class.getClassLoader(), new Class[] {Subject.class}, subjectHandler);
+//		Subject subject = (Subject) Proxy.newProxyInstance(Subject.class.getClassLoader(), new Class[] {Subject.class}, subjectHandler);
+		Subject subject = (Subject) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(), new Class[] {Subject.class}, subjectHandler);
 		subject.process();
 	}
 

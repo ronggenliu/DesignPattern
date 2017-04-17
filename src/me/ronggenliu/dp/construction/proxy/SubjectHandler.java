@@ -7,11 +7,6 @@ public class SubjectHandler implements InvocationHandler {
 
 	Subject realSubject = null;
 	
-	public SubjectHandler(Subject realSubject) {
-		super();
-		this.realSubject = realSubject;
-	}
-	
 	public SubjectHandler() {
 		super();
 		// TODO Auto-generated constructor stub
