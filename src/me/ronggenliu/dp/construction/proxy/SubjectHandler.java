@@ -11,14 +11,20 @@ public class SubjectHandler implements InvocationHandler {
 		super();
 		this.realSubject = realSubject;
 	}
+	
+	public SubjectHandler() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args)
 			throws Throwable {
 		System.out.println("Dynamic Proxy - Before process");
-//		if(realSubject == null) {
-//			realSubject = new RealSubject();
-//		}
+		// lazy loading.
+		if(realSubject == null) {
+			realSubject = new RealSubject();
+		}
 //		realSubject.process();
 		Object obj = method.invoke(realSubject, args);
 		System.out.println("Dynamic Proxy - After process");

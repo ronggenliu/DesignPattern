@@ -6,5 +6,5 @@ public class RealSubject implements Subject {
 	public void process() {
 		System.out.println("process Real Subject");
 	}
-
+	
 }
