@@ -35,9 +35,10 @@ public class Leader implements Worker {
 		StringBuilder sBuilder = new StringBuilder();
 		sBuilder.append("My name is " + this.name + ", I'm a leader, I have " + this.workers.size() + " subordinates. they are:\n");
 		sBuilder.append("-------------\n");
-		for(Worker worker: this.workers) {
-			sBuilder.append(worker.toString() + "\n");
-		}
+//		for(Worker worker: this.workers) {
+//			sBuilder.append(worker.toString() + "\n");
+//		}
+		this.workers.forEach(worker -> sBuilder.append(worker.toString() + "\n"));
 		sBuilder.append("-------------\n");
 		return sBuilder.toString();
 	}
