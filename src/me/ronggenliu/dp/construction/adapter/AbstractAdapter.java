@@ -1,4 +1,4 @@
-package me.ronggenliu.dp.adapter;
+package me.ronggenliu.dp.construction.adapter;
 
 /**
  * default adapter dp.
