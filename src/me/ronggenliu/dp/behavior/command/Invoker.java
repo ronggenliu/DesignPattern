@@ -1,14 +1,14 @@
 package me.ronggenliu.dp.behavior.command;
 
 public class Invoker {
-	private Command command = null;
+	private CommandQueue commandQueue = null;
 	
-	public Invoker(Command command) {
+	public Invoker(CommandQueue commandQueue) {
 		super();
-		this.command = command;
+		this.commandQueue = commandQueue;
 	}
 
 	public void call() {
-		this.command.execute();
+		this.commandQueue.execute();
 	}
 }
