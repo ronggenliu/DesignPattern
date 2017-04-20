@@ -11,4 +11,8 @@ public class Invoker {
 	public void call() {
 		this.commandQueue.execute();
 	}
+	
+	public void undo() {
+		this.commandQueue.undo();
+	}
 }

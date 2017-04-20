@@ -13,4 +13,8 @@ public class Receiver {
 	public void action() {
 		System.out.println("do action.[" + this.name + "]");
 	}
+	
+	public void undo() {
+		System.out.println("undo action.[" + this.name + "]");
+	}
 }

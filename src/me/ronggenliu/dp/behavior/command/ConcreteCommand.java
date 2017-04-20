@@ -14,4 +14,9 @@ public class ConcreteCommand extends Command {
 		this.receiver.action();
 	}
 
+	@Override
+	void undo() {
+		this.receiver.undo();
+	}
+
 }

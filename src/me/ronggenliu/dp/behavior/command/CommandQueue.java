@@ -18,4 +18,8 @@ public class CommandQueue {
 	public void execute() {
 		this.commands.forEach(command -> command.execute());
 	}
+	
+	public void undo() {
+		this.commands.forEach(command -> command.undo());
+	}
 }

@@ -12,5 +12,6 @@ public class Client {
 		commandQueue.addCommand(concreteCommand2);
 		Invoker invoker = new Invoker(commandQueue);
 		invoker.call();
+		invoker.undo();
 	}
 }
