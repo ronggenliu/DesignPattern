@@ -1,0 +1,56 @@
+@startuml
+
+class Client {
+    - builder:ConcreteProduct1Builder
+    - director:Director
+}
+
+class Director {
+    - builder:ProductBuilder
+    + construct()
+}
+
+abstract class ProductBuilder {
+    - product:Product
+    __
+    HookMethod
+    ..
+    + needPartB():boolean
+    + {abstract} buildPartA()
+    + {abstract} buildPartB()
+    + {abstract} buildPartC()
+
+    + getResutl():Product
+
+}
+together {
+    class ConcreteProduct1Bulder {
+        + needPartB():boolean
+        + buildPartA()
+        + buildPartB()
+        + buildPartC()
+    }
+    class ConcreteProduct2Bulder {
+        + needPartB():boolean
+        + buildPartA()
+        + buildPartB()
+        + buildPartC()
+    }
+}
+
+class Product {
+    - partA:String
+    - partB:String
+    - partC:String
+    __
+    get/setter
+    ..
+}
+
+Client -right-> Director
+Director o-right- ProductBuilder
+ProductBuilder o-up- Product
+ProductBuilder <|-- ConcreteProduct1Bulder
+ProductBuilder <|-- ConcreteProduct2Bulder
+
+@enduml
