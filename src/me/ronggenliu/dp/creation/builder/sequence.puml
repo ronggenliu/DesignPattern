@@ -3,6 +3,7 @@ participant Client
 autonumber
 create ConcreteProductBuilder
 Client -[#red]> ConcreteProductBuilder:new
+participant Director
 create Product
 ConcreteProductBuilder -[#red]> Product: new
 create Director
@@ -10,8 +11,11 @@ Client -[#red]> Director: new(concreteProductBuilder)
 Client -[#red]> Director: construct()
 Director -[#red]> ConcreteProductBuilder: buildPartA()
 ConcreteProductBuilder -[#red]> Product: setPartA()
-Director -[#red]> ConcreteProductBuilder: buildPartB()/needPartB()
+alt need partB
+Director -[#red]> ConcreteProductBuilder: buildPartB()
 ConcreteProductBuilder -[#red]> Product: setPartB()
+|||
+end
 Director -[#red]> ConcreteProductBuilder: buildPartC()
 ConcreteProductBuilder -[#red]> Product: setPartC()
 Director <[#blue]-- ConcreteProductBuilder: getResult() return Product
