@@ -1,0 +1,20 @@
+@startuml
+participant Client
+autonumber
+create ConcreteProductBuilder
+Client -[#red]> ConcreteProductBuilder:new
+create Product
+ConcreteProductBuilder -[#red]> Product: new
+create Director
+Client -[#red]> Director: new(concreteProductBuilder)
+Client -[#red]> Director: construct()
+Director -[#red]> ConcreteProductBuilder: buildPartA()
+ConcreteProductBuilder -[#red]> Product: setPartA()
+Director -[#red]> ConcreteProductBuilder: buildPartB()/needPartB()
+ConcreteProductBuilder -[#red]> Product: setPartB()
+Director -[#red]> ConcreteProductBuilder: buildPartC()
+ConcreteProductBuilder -[#red]> Product: setPartC()
+Director <[#blue]-- ConcreteProductBuilder: getResult() return Product
+Client <[#blue]-- Director: return Product
+
+@enduml
